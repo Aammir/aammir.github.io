@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image"/></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button> </a><br><br></div>
+				</div>
+				<div class="row"><div class="col-12 col-12-medium">
+					<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+						<span class="p_title"></span> was a <span class="p_tech"></span> project.</div>
+					<div class="summary">	<p class="bold">In this project I:</p>
+						<ol class="p_points"></ol>
+					</div>
+					</div></div>
+			</div>
+		</div>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>	
+<script src="assets/js/util.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+  <script>
+
+	$(document).ready(function(){
+	//INIT PROJ DETAILS FUNCTION
+	function project_detail(p_title,p_image,p_url,p_tech,p_intro, p_point_1, p_point_2, p_point_3,p_point_4){
+		$('.p_title').html(p_title);
+		$('.p_image').attr('src','images/'+p_image);
+		$('.p_url').attr('href',p_url);
+		$('.p_tech').html(p_tech);
+		$('.p_intro').html(p_intro);
+		var p_point_1 = p_point_1 !='' ? '<li>'+p_point_1+'</li>' : '';
+		var p_point_2 = p_point_2 !='' ? '<li>'+p_point_2+'</li>' : '';
+		var p_point_3 = p_point_3 !='' ? '<li>'+p_point_3+'</li>' : '';
+		var p_point_4 = p_point_4 !='' ? '<li>'+p_point_4+'</li>' : '';
+		$('.p_points').append(p_point_1 + p_point_2 + p_point_3 + p_point_4);
+	  }	
+   //
+   $(document).scroll(function() {
+	$('#header').load('./inc/header.html');
+	$('#sideHere').load('./inc/dwnld.html');
+	$('#menu').load('./inc/menu.html');
+	$('#footer').load('./inc/footer.html');
+  var y = $(this).scrollTop();
+  if (y > 100) {
+  $('.back-to-top').fadeIn();
+  } else {
+   $('.back-to-top').fadeOut();
+  }
+  });
+   //ADDING PROJECT DETAIL
+//    project_detail(p_title,p_image,p_url,p_tech,p_intro, p_point_1, p_point_2, p_point_3,p_point_4);
+	  project_detail(
+		  'Riding Pink',// title
+		  'rp.jpg',//image
+		  'https://ridingpink.com/',//url
+		  'Wordpress',//tech
+		   'This project was for an online taxi service in Malaysia like uber.',//intro
+		   'I customized the theme.',//point1
+		   'Used Visual Composer to build this website.',//point
+		   '',//point
+		   '',//point
+		   );
+  });
+	</script>
+</body>
+</html>

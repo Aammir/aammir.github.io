@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio" style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span></div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			project_detail(
+				'Diana Dental',// title
+				'diana',//name
+				'https://dianadental.ca/',//url 
+				'Transformed a Georgetown, ON <strong class="industry">dental practice\'s</strong> online presence with a visually striking website. Leveraged Divi theme and customized it flawlessly with Divi theme builder. <strong>This website got Grade A on GTMetrix.</strong>',//intro
+				'<strong>Custom WordPress Development:</strong> Developed a WordPress website using the Divi page builder to achieve a visually appealing design and layout.',
+				'<strong>Responsiveness:</strong> Ensured the website\'s responsiveness across various devices and screen sizes to provide an optimal user experience.',
+				'<strong>Content Management:</strong> Implemented a user-friendly content management system that allows easy updating of website content, ensuring that the client can manage their website efficiently.',
+				'<strong>Custom Post Types:</strong> Created custom post types and sections for different aspects of the website, including articles, testimonials, patients, services, offices, team, and about the clinic. This custom structure enhanced the organization of content.',
+				'<strong>SEO-Friendly Structure:</strong> Designed the website with an SEO-friendly structure to enhance visibility on search engines and help potential patients find the clinic more easily.',
+				'<strong>User Experience (UX):</strong> Prioritized a seamless user experience by optimizing the navigation, providing clear calls to action, and making the website user-friendly.',
+				'<strong>Custom Design Elements:</strong> Integrated custom design elements to align with the client\'s branding and make the website stand out.',
+				'<strong>Cross-Browser Compatibility:</strong> Ensured compatibility with various web browsers to guarantee consistent rendering and functionality.',
+				'<strong>Customized Contact Form:</strong> Implemented a custom contact form for easy patient inquiries and feedback.',
+				'<strong>Social Media Integration:</strong> Integrated social media links and sharing options to improve online presence and facilitate user engagement.',
+				'<strong>Content Sections:</strong> Organized the website into relevant sections for articles, testimonials, patients, services, offices, team, and detailed information about the clinic to provide users with clear and informative content.',
+				'<strong>Client Collaboration:</strong> Worked closely with the client to gather requirements, provide regular updates, and incorporate their feedback throughout the project\'s development stages.',
+				'<strong>Client Training:</strong> Provided training to the client on how to manage and update their website\'s content, ensuring they can independently maintain the website.',
+				'<strong>Ongoing Support:</strong> Offered post-launch support and assistance to address any issues or updates the client may require. Established a maintenance plan to ensure the long-term health and security of the website.',
+			);
+		});
+	</script>
+</body>
+</html>

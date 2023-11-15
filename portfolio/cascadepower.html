@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'cascadepower',//name
+				'Cascade Power',// title
+				/*INTRO TEXT*/	'Cascade Power Website is a <strong>Solar Energy Company</strong> Project.',//intro
+				'https://cascadepower.com/',//url 
+/*POINTS*/		'<strong>Betheme and JSComposer Expertise:</strong> Utilized Betheme for the overall theme structure and design and employed JSComposer for creating custom layouts and elements, ensuring a visually appealing and functional website.',
+
+				'<strong>Custom Post Types Implementation:</strong> Created custom post types for testimonials, careers, and services to organize and showcase content in a structured manner, providing a seamless user experience.',
+
+				'<strong>Content Management:</strong> Implemented a robust content management system, allowing the client to easily update and manage content using custom post types and JSComposer.',
+
+				'<strong>SEO Optimization:</strong> Carefully optimized the website for search engines, implementing SEO best practices such as meta tags, keyword optimization, and schema markup to enhance search engine visibility.',
+
+				'<strong>Performance Optimization (A on GTmetrix):</strong> Achieved an <strong>\'A\' rating on GTmetrix</strong> through meticulous performance optimization, including image compression, code minification, and other techniques to ensure fast loading times.',
+
+				'<strong>Custom Post Types:</strong> Developed a dedicated careers section with custom post types, making it easy for potential candidates to explore job opportunities and submit applications.',
+
+				'<strong>Responsiveness:</strong> Ensured full responsiveness across various devices and screen sizes, offering a seamless user experience for visitors accessing the website from different platforms.',
+
+				'<strong>Customized Design Elements:</strong> Incorporated custom design elements using JSComposer and Betheme to align with the solar solutions theme, creating a unique and branded appearance.',
+
+				'<strong>Cross-Browser Compatibility:</strong> Verified cross-browser compatibility to ensure the website functions consistently across different web browsers.',
+
+				'<strong>User-Friendly Interface:</strong> Designed an intuitive and user-friendly interface, making it easy for visitors to navigate the website and find relevant information about solar solutions.',
+			);
+		});
+	</script>
+</body>
+
+</html>

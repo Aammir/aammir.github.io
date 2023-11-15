@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'laredosmith',//name
+				'LaredoSmith',// title
+				/*INTRO TEXT*/	'LaredoSmith is a website for a <strong class="industry">Lawfirm</strong>',//intro
+				'https://laredosmith.com/',//url 
+/*POINTS*/		'<strong>Enfold Theme Implementation:</strong> Successfully utilized the Enfold theme to create a visually appealing and responsive website, leveraging its versatile design options and features.',
+
+				'<strong>Custom Metaboxes Content Handling:</strong> Implemented custom metaboxes to handle and organize content effectively, providing a tailored and user-friendly approach to content management.',
+
+				'<strong>Responsive Design with Enfold:</strong> Ensured the website\'s responsiveness across various devices, guaranteeing an optimal user experience for visitors on desktops, tablets, and mobile devices.',
+
+				'<strong>Collaborative Design Process:</strong> Engaged in a collaborative design process with stakeholders to align the website\'s aesthetics and functionality with the specific goals and requirements of the project.',
+
+				'<strong>Customization of Enfold Theme Features:</strong> Leveraged the customization capabilities of the Enfold theme to tailor features and elements according to the unique needs of the website.',
+
+				'<strong>Client Training on Content Management:</strong> Provided comprehensive training to the client on effectively managing and updating content using custom metaboxes, empowering them to maintain the website independently.',
+
+				'<strong>Optimized Performance and Speed:</strong> Implemented performance optimization techniques to enhance the website\'s loading speed and overall performance, contributing to a positive user experience.',
+
+				'<strong>User-Friendly Content Editing with Custom Metaboxes:</strong> Designed a user-friendly content editing experience by integrating custom metaboxes, streamlining the process for administrators and content managers.',
+
+				'<strong>SEO Best Practices:</strong> Incorporated basic SEO best practices, including meta tags and other on-page optimization techniques, to enhance the website\'s search engine visibility.',
+			);
+		});
+	</script>
+</body>
+
+</html>

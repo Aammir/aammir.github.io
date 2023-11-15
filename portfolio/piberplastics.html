@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'piberplastics',//name
+				'Piber Plastics',// title
+				/*INTRO TEXT*/	'Plastic <strong>Industrial Company</strong> Website',//intro
+				'https://www.piberplastics.com.au/',//url 
+/*POINTS*/		'<strong>Pixi Theme Implementation:</strong> Successfully implemented the Pixi theme to create a visually appealing and functional website, leveraging its design features for a polished look.',
+
+				'<strong>JS Composer Integration for Dynamic Layouts:</strong> Utilized JS Composer, a powerful page builder, to craft dynamic and interactive layouts, ensuring a seamless and engaging user experience.',
+
+				'<strong>WooCommerce Integration for E-commerce Functionality:</strong> Integrated WooCommerce, a leading e-commerce plugin, to provide a robust online shopping experience for users interested in PiberPlastics\' products.',
+
+				'<strong>Content Handling with Custom Solutions:</strong> Developed and implemented custom solutions for content handling, ensuring efficient organization and presentation of information throughout the website.',
+
+				'<strong>Collaborative Design Process:</strong> Engaged in a collaborative design process with stakeholders to align the website\'s aesthetics and functionality with the specific goals and branding of PiberPlastics.',
+
+				'<strong>Product Presentation and Management in WooCommerce:</strong> Implemented effective product presentation and management strategies within WooCommerce to showcase PiberPlastics\' products in an enticing manner.',
+
+				'<strong>User-Friendly Content Editing with JS Composer:</strong> Provided a user-friendly content editing experience for administrators and content managers using JS Composer, allowing for easy updates and modifications.',
+
+				'<strong>Responsive Design with Pixi Theme:</strong> Ensured the website\'s responsiveness across various devices, providing an optimal user experience for visitors on desktops, tablets, and mobile devices.',
+
+				'<strong>Performance Optimization for Speed:</strong> Applied performance optimization techniques to enhance the website\'s loading speed, contributing to a positive user experience.',
+
+				'<strong>SEO Best Practices:</strong> Incorporated SEO best practices, including meta tags and other on-page optimization techniques, to improve the website\'s search engine visibility.',
+			);
+		});
+	</script>
+</body>
+
+</html>

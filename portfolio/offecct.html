@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'offecct',
+'Offecct',
+'Furniture',
+'https://www.offecct.com/',
+  '<strong>Custom Theme Development:</strong> Crafted a bespoke custom theme for Offecct, ensuring a unique and brand-aligned visual identity tailored to showcase furniture products.',
+  '<strong>WooCommerce Integration:</strong> Successfully integrated WooCommerce, a leading e-commerce plugin, to facilitate online transactions for Offecct\'s furniture products.',
+  '<strong>Multilingual Support with Polylang:</strong> Implemented Polylang to provide multilingual support, allowing users to access the website in different languages, enhancing the global reach of Offecct.',
+  '<strong>Collaborative Design Process:</strong> Engaged in a collaborative design process with stakeholders to align the website\'s aesthetics and functionality with the specific goals and branding of Offecct.',
+  '<strong>Product Presentation and Management:</strong> Implemented effective strategies for presenting and managing furniture products within the online shop, optimizing the user experience for potential buyers.',
+  '<strong>Responsive Design:</strong> Ensured the website\'s responsiveness across various devices, providing an optimal user experience for visitors on desktops, tablets, and mobile devices.',
+  '<strong>User-Friendly Content Editing Experience:</strong> Provided a user-friendly content editing experience for administrators and content managers, allowing for easy updates and modifications to showcase the latest furniture designs.',
+  '<strong>Secure E-commerce Transactions:</strong> Ensured a secure and reliable online shopping experience, incorporating SSL encryption and best practices to safeguard customer information during transactions.',
+  '<strong>Performance Optimization for Speed:</strong> Applied performance optimization techniques to enhance the website\'s loading speed, contributing to a positive user experience and potentially higher conversion rates.'
+			);
+		});
+	</script>
+</body>
+
+</html>

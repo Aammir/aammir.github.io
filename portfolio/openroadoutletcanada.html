@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'openroadoutletcanada',//name
+				'Open Road Outlet Canada',// title
+				/*INTRO TEXT*/	'Website for a <strong>Vehilcle Dealer</strong>',//intro
+				'https://openroadoutletcanada.com/',//url 
+/*POINTS*/			'<strong>GeneratePress Theme Implementation:</strong> Successfully utilized the GeneratePress theme to create a sleek and efficient website, leveraging its lightweight and performance-oriented design.',
+
+				'<strong>Elementor Integration for Advanced Layouts:</strong> Integrated Elementor, a versatile page builder, to craft dynamic and visually appealing layouts, ensuring an engaging user experience.',
+
+				'<strong>Responsive Design for All Devices:</strong> Ensured full responsiveness across various devices, providing an optimal user experience for visitors on desktops, tablets, and mobile devices.',
+
+				'<strong>Custom Post Types Implementation:</strong> Developed and implemented custom post types to organize and showcase specific sections of content, enhancing the website\'s structure and usability.',
+
+				'<strong>Section Handling with Elementor:</strong> Leveraged Elementor\'s capabilities for efficient section handling, allowing for easy customization and management of distinct sections on the website.',
+
+				'<strong>Collaborative Design Process:</strong> Engaged in a collaborative design process with stakeholders to align the website\'s aesthetics and functionality with the specific goals and branding of the project.',
+
+				'<strong>Optimized Performance with GeneratePress:</strong> Implemented performance optimization strategies specific to GeneratePress, contributing to a fast-loading website and a positive user experience.',
+			);
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'trail4runner',
+				'Trail 4 Runner',
+				'Auto Spare Parts',
+				'https://trail4runner.com/',
+				'<strong>Flatsome Theme Implementation:</strong> Implemented the Flatsome theme as the foundation for the website, leveraging its features and design capabilities for a modern and visually appealing appearance.',
+				'<strong>JS Composer Integration:</strong> Utilized JS Composer (now known as WPBakery Page Builder) to design and customize dynamic layouts, ensuring flexibility and ease of content management for Trail 4 Runner.',
+				'<strong>WooCommerce Integration for Auto Spare Parts:</strong> Integrated WooCommerce, a powerful e-commerce plugin, to facilitate online transactions for auto spare parts sold by Trail 4 Runner.',
+				'<strong>Specialization in Auto Spare Parts:</strong> Tailored the website to emphasize Trail 4 Runner\'s specialization in auto spare parts, creating dedicated sections to showcase a variety of products and accessories.',
+				'<strong>Collaborative Design Process:</strong> Engaged in a collaborative design process with stakeholders to align the website\'s aesthetics and functionality with the specific goals and branding of Trail 4 Runner.',
+				'<strong>User-Friendly Product Presentation:</strong> Implemented effective strategies for presenting and detailing auto spare parts, optimizing the user experience for potential buyers.',
+				'<strong>Online Shop for Auto Spare Part Sales:</strong> Developed an online shop functionality to facilitate the purchase of auto spare parts directly from the website, providing a seamless shopping experience.',
+				'<strong>Responsive Design with Flatsome:</strong> Ensured the website\'s responsiveness across various devices, providing an optimal user experience for visitors on desktops, tablets, and mobile devices.',
+				'<strong>User-Friendly Content Editing Experience:</strong> Provided a user-friendly content editing experience for administrators and content managers, allowing for easy updates to product listings and information.'
+			);
+		});
+	</script>
+</body>
+
+</html>

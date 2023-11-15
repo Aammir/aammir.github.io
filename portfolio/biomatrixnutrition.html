@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Aamir's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="is-preload">
+	<div id="sideHere"></div>
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header"></header>
+		<!-- Menu -->
+		<nav id="menu"></nav>
+
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<a href="../portfolio"
+					style="text-decoration: none !important;border: none !important;font-size: 40px;margin: 0;padding: 0;line-height: 0;">←</a>
+				<h1 class="p_title"></h1>
+				<span class="image main"><img src="" alt="" class="p_image" /></span>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<p class="p_intro"></p>
+					</div>
+					<div class="col-4 col-12-medium"><a href="URL" target="_blank"
+							class='text-center center p_url'><button class="button primary">Project url</button>
+						</a><br><br></div>
+				</div>
+				<div class="row">
+					<div class="col-8 col-12-medium">
+						<div class="info"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;
+							About <span class="p_title"></span> Project</div>
+						<div class="summary">
+							<ol class="p_points"></ol>
+						</div>
+
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="mockup_cont">
+							<a href="" target="blank" class="pml"> Click to view Project Mockup<br>
+								<img src="" class="p_mockup" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- <script src="assets/js/util.js"></script> -->
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/main.js"></script>
+		<!-- Footer -->
+		<footer id="footer"></footer>
+	</div>
+
+	<script>
+
+		$(document).ready(function () {
+			//
+			$(document).scroll(function () {
+				$('#header').load('./inc/header.html');
+				$('#sideHere').load('./inc/dwnld.html');
+				$('#menu').load('./inc/menu.html');
+				$('#footer').load('./inc/footer.html');
+				var y = $(this).scrollTop();
+				if (y > 100) {
+					$('.back-to-top').fadeIn();
+				} else {
+					$('.back-to-top').fadeOut();
+				}
+			});
+			//ADDING PROJECT DETAIL
+			//    project_detail(p_name,p_title,p_intro,p_url, p_point_1, p_point_2,....);
+			project_detail(
+				'biomatrixnutrition',
+				'Bio Matrix Nutrition',
+				'Supplements',
+				'https://biomatrixnutrition.com/',
+				'<strong>Salient Theme Implementation:</strong> Implemented the Salient theme as the foundation for the website, utilizing its features and design capabilities to create a visually appealing and dynamic online presence.',
+				'<strong>JS Composer Integration:</strong> Utilized the JS Composer (now known as WPBakery Page Builder) to design and customize the layouts, ensuring flexibility and ease of content management for Bio Matrix Nutrition.',
+				'<strong>WooCommerce Integration for Supplements:</strong> Integrated WooCommerce, a robust e-commerce plugin, to facilitate online transactions for supplements offered by Bio Matrix Nutrition.',
+				'<strong>Specialization in Supplements:</strong> Tailored the website to emphasize Bio Matrix Nutrition\'s specialization in supplements, creating dedicated sections to showcase various products and their benefits.',
+				'<strong>Collaborative Design Process:</strong> Engaged in a collaborative design process with stakeholders to align the website\'s aesthetics and functionality with the specific goals and branding of Bio Matrix Nutrition.',
+				'<strong>Product Presentation and Management:</strong> Implemented effective strategies for presenting and managing supplement products, optimizing the user experience for potential buyers.',
+				'<strong>Online Shop for Supplement Sales:</strong> Developed an online shop functionality, allowing customers to browse, select, and purchase supplements directly from the website.',
+				'<strong>Responsive Design with Salient:</strong> Ensured the website\'s responsiveness across various devices, providing an optimal user experience for visitors on desktops, tablets, and mobile devices.',
+				'<strong>User-Friendly Content Editing Experience:</strong> Provided a user-friendly content editing experience for administrators and content managers, allowing for easy updates to supplement product listings and information.'
+			);
+		});
+	</script>
+</body>
+
+</html>
